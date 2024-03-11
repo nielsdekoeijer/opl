@@ -1,0 +1,15 @@
+[package]
+name = "opl"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "opl"
+crate-type = ["cdylib"]
+
+[dependencies]
+openblas-src = { version = "0.10.9", features = ["cblas", "static"] }
+pyo3 = { version = "*", features = ["num-complex", "extension-module"] }
+blas = "*"
+lapacke = "*"
+num-complex = "*"
